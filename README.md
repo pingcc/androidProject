@@ -1,6 +1,6 @@
 # androidProject
 
-android 项目开发框架 /br
+android 项目开发框架 
 直接pull该文件，可实现快速开发android项目
 架构: MVP
 框架：dagger2+Rxjava2+retrofit
