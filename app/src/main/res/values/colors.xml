@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="color_999">#999</color>
+    <color name="color_666">#666</color>
+    <color name="color_333">#333</color>
+    <color name="color_ccc">#ccc</color>
+    <color name="color_8cbdff">#8cbdff</color>
+    <color name="color_white">@android:color/white</color>
+
+    <color name="bg_divider_line">#eee</color>
+
+    <color name="color_default">#2f88ff</color>
+
+    <color name="color_toolbar">#2f88ff</color>
+    <color name="color_50_toolbar">#502f88ff</color>
+    <color name="color_40_toolbar">#402f88ff</color>
+    <color name="color_toolbar_deep">#2366bf</color>
+    <color name="color_toolbar_invalid">#accfff</color>
+
+</resources>

@@ -1,0 +1,70 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.dream.application"
+        minSdkVersion 14
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        debug {
+//          buildConfigField "String", "BASE_URL", "\"http://192.168.1.222:8005/\""
+            buildConfigField "String", "BASE_URL", "\"http://ws.sandbox.mammasay.com\""
+
+
+        }
+
+        release {
+            buildConfigField "String", "BASE_URL", "\"https://ws.mammasay.com\""
+
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+ext {
+    butterknife = "8.6.0"
+}
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation rootProject.ext.dependencies["appcompat-v7"]
+    implementation rootProject.ext.dependencies["support-v4"]
+    implementation rootProject.ext.dependencies["design"]
+    implementation rootProject.ext.dependencies["converter-gson"]
+    implementation rootProject.ext.dependencies["adapter-rxjava2"]
+    implementation rootProject.ext.dependencies["rxjava2:rxjava"]
+    implementation rootProject.ext.dependencies["rxjava2:rxandroid"]
+    implementation rootProject.ext.dependencies["constraint-layout"]
+    implementation rootProject.ext.dependencies["rxpermissions"]
+    implementation rootProject.ext.dependencies["dagger"]
+    implementation rootProject.ext.dependencies["BaseRecyclerViewAdapterHelper"]
+    debugImplementation rootProject.ext.dependencies["chuck:library"]
+    releaseImplementation rootProject.ext.dependencies["chuck:library-no-op"]
+    implementation rootProject.ext.dependencies["butterknife"]
+    debugImplementation rootProject.ext.dependencies["leakcanary-android"]
+    releaseImplementation rootProject.ext.dependencies["leakcanary-android-no-op"]
+
+    annotationProcessor rootProject.ext.dependencies["dagger-compiler"]
+    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
+
+
+    implementation rootProject.ext.dependencies["logger"]
+
+    implementation rootProject.ext.dependencies["AndroidDevelopAssistant"]
+
+
+
+}
