@@ -40,6 +40,13 @@ dependencies {
     androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    annotationProcessor rootProject.ext.dependencies["dagger-compiler"]
+    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
+    annotationProcessor rootProject.ext.dependencies["glide:compiler"]
+    debugImplementation rootProject.ext.dependencies["chuck:library"]
+    releaseImplementation rootProject.ext.dependencies["chuck:library-no-op"]
+    debugImplementation rootProject.ext.dependencies["leakcanary-android"]
+    releaseImplementation rootProject.ext.dependencies["leakcanary-android-no-op"]
     implementation rootProject.ext.dependencies["appcompat-v7"]
     implementation rootProject.ext.dependencies["support-v4"]
     implementation rootProject.ext.dependencies["design"]
@@ -54,17 +61,8 @@ dependencies {
     debugImplementation rootProject.ext.dependencies["chuck:library"]
     releaseImplementation rootProject.ext.dependencies["chuck:library-no-op"]
     implementation rootProject.ext.dependencies["butterknife"]
-    debugImplementation rootProject.ext.dependencies["leakcanary-android"]
-    releaseImplementation rootProject.ext.dependencies["leakcanary-android-no-op"]
-
-    annotationProcessor rootProject.ext.dependencies["dagger-compiler"]
-    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
-
-
     implementation rootProject.ext.dependencies["logger"]
-
     implementation rootProject.ext.dependencies["AndroidDevelopAssistant"]
-
 
 
 }
